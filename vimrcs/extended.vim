@@ -116,6 +116,10 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 if executable('ag')
   let g:ackprg = 'ag --vimgrep --smart-case'
 endif
+" Use ripgrep (rg) if available
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep --smart-case'
+endif
 
 " When you press gv you Ack after the selected text
 vnoremap <silent> gv :call VisualSelection('gv', '')<CR>

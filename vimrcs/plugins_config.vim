@@ -77,7 +77,6 @@ ino <C-j> <C-r>=snipMate#TriggerSnippet()<cr>
 snor <C-j> <esc>i<right><C-r>=snipMate#TriggerSnippet()<cr>
 let g:snipMate = { 'snippet_version' : 1 }
 
-
 """"""""""""""""""""""""""""""
 " => Vim grep
 """"""""""""""""""""""""""""""
@@ -158,20 +157,20 @@ nnoremap <silent> <leader>z :Goyo<cr>
 " => Ale (syntax checker and linter)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
-\   'javascript': ['eslint'],
 \   'python': ['flake8'],
-\   'go': ['go', 'golint', 'errcheck']
+\   'bash': ['shellcheck'],
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
 
-" Disabling highlighting
-let g:ale_set_highlights = 0
+" highlighting
+let g:ale_set_highlights = 1
 
 " Only run linting when saving the file
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_virtualtext_cursor = 'disabled'
+let g:ale_fix_on_save = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
