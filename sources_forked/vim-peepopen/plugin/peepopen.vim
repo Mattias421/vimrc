@@ -46,9 +46,10 @@ endif
 noremap <unique> <script> <Plug>PeepOpen <SID>Launch
 noremap <SID>Launch :call <SID>LaunchPeepOpenViaVim()<CR>
 
-if !hasmapto('<Plug>PeepOpen')
-  map! <unique> <silent> <Leader>p <Plug>PeepOpen
-endif
+" Not sure what this does but it was problematic so I'm commenting it out
+" if !hasmapto('<Plug>PeepOpen')
+"   nmap <unique> <silent> <Leader>p <Plug>PeepOpen
+" endif
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
