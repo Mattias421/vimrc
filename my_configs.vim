@@ -1,12 +1,14 @@
+set termguicolors
+colorscheme catppuccin
+
 set rnu
+set number
 
-command! GC G commit -am
 
-colorscheme default
+" unused
+" iunmap <leader>
+" command! GC G commit -am
+" let g:AutoPairsMapSpace = 0
 
-iunmap <leader>
-
-let g:AutoPairsMapSpace = 0
-
-autocmd! VimEnter * Goyo
+" autocmd! VimEnter * Goyo
 
