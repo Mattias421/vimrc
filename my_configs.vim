@@ -1,6 +1,6 @@
 set rnu
 
-command! GC G commit -am
+set ttimeoutlen=50
 
 colorscheme default
 
